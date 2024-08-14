@@ -33,7 +33,9 @@ sudo usermod -aG docker jenkins
 sudo reboot
 ```
 Creating the CI/CD Pipeline
+
 Step 1: Create a New Pipeline Job
+
 In the Jenkins dashboard, click on "New Item" to create a new job:
 
 Name: notes-app-cicd
@@ -42,18 +44,21 @@ Click "OK" and configure the pipeline:
 
 
 Step 2: Configure Pipeline
+
 In the pipeline configuration:
 
 Check ✅GitHub project: and paste the GitHub URL: https://github.com/ShubhamSoni-1/Notes-app
 Check ✅GitHub hook trigger for GIT SCM polling
 
 Step 3: Configure DockerHub Credentials
+
 To push the Docker image to DockerHub, configure the credentials in Jenkins:
 
 Go to Dashboard > Manage Jenkins > Credentials > System > Global Credentials
 Add DockerHub credentials and save
 
 Step 4: Finalize and Run the Pipeline
+
 Save the pipeline configuration and trigger a build. You should see the stages execute in sequence with green boxes indicating success.
 
 
